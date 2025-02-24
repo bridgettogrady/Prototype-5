@@ -9,11 +9,14 @@ public class PlayerMove : MonoBehaviour
     public float minX = -6f;
     public float maxY = 6f;
     public float minY = -6f;
+    public Color originalColor;
+    public Color successColor;
+    public float colorWait = 1.5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private SpriteRenderer sr;
+
+    void Start() {
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -35,5 +38,12 @@ public class PlayerMove : MonoBehaviour
             float newX = Mathf.Clamp(transform.position.x + snapDist, minX, maxX);
             transform.position = new Vector2(newX, transform.position.y);
         }
+    }
+
+    public IEnumerator SetColors() {
+        Debug.Log("inside set color");
+        sr.color = successColor;
+        yield return new WaitForSeconds(colorWait);
+        sr.color = originalColor;
     }
 }

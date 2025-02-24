@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5307628592857416240}
   - component: {fileID: 3497709937137712461}
   - component: {fileID: 565624849511869288}
+  - component: {fileID: 6019879876211018723}
   m_Layer: 0
   m_Name: Music Note
   m_TagString: Untagged
@@ -100,8 +101,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expansionRate: 1.003
   maxScale: 4
-  waitTime: 2
+  waitTime: 1.5
   originalScale: {x: 1, y: 1}
+  player: {fileID: 0}
+--- !u!58 &6019879876211018723
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5066338511084942718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.56
 --- !u!1 &8120270238200404582
 GameObject:
   m_ObjectHideFlags: 0
