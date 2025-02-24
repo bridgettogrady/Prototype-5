@@ -146,6 +146,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note
@@ -206,6 +210,8 @@ GameObject:
   - component: {fileID: 362648715}
   - component: {fileID: 362648714}
   - component: {fileID: 362648713}
+  - component: {fileID: 362648717}
+  - component: {fileID: 362648716}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -230,6 +236,9 @@ MonoBehaviour:
   minX: -2
   maxY: 2
   minY: -2
+  originalColor: {r: 0.18039216, g: 0.48235294, b: 0.8117647, a: 1}
+  successColor: {r: 0.2947933, g: 0.8117647, b: 0.16470589, a: 1}
+  colorWait: 0.5
 --- !u!212 &362648714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -292,11 +301,73 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 1.55, y: 1.55, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &362648716
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362648712}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &362648717
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362648712}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!4 &499382959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5307628592857416240, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
@@ -452,6 +523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note (1)
@@ -661,6 +736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note
@@ -833,6 +912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note (4)
@@ -1070,6 +1153,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note (2)
@@ -1322,6 +1409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note
@@ -1389,6 +1480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note (3)
@@ -1541,6 +1636,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note (1)
@@ -1598,6 +1697,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 825912211}
     m_Modifications:
+    - target: {fileID: 565624849511869288, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 362648712}
     - target: {fileID: 5066338511084942718, guid: 0acb77c654951204bb97ad92c35bf512, type: 3}
       propertyPath: m_Name
       value: Music Note
