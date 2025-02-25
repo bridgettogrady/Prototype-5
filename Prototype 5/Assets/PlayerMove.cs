@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -22,26 +21,26 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) { // up
+        if (Input.GetKeyDown(KeyCode.UpArrow)) { // up
             float newY = Mathf.Clamp(transform.position.y + snapDist, minY, maxY);
             transform.position = new Vector2(transform.position.x, newY);
         }
-        if (Input.GetKeyDown(KeyCode.A)) { // left
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) { // left
             float newX = Mathf.Clamp(transform.position.x - snapDist, minX, maxX);
             transform.position = new Vector2(newX, transform.position.y);
         }
-        if (Input.GetKeyDown(KeyCode.S)) { // down
+        if (Input.GetKeyDown(KeyCode.DownArrow)) { // down
             float newY = Mathf.Clamp(transform.position.y - snapDist, minY, maxY);
             transform.position = new Vector2(transform.position.x, newY);
         }
-        if (Input.GetKeyDown(KeyCode.D)) { // right
+        if (Input.GetKeyDown(KeyCode.RightArrow)) { // right
             float newX = Mathf.Clamp(transform.position.x + snapDist, minX, maxX);
             transform.position = new Vector2(newX, transform.position.y);
         }
     }
 
-    public IEnumerator SetColors() {
-        Debug.Log("inside set color");
+    public IEnumerator SetColors()
+    {
         sr.color = successColor;
         yield return new WaitForSeconds(colorWait);
         sr.color = originalColor;
