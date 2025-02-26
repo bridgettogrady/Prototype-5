@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fde17b0158ba84cb0a296f1b92c951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expansionRate: 1.095
+  expansionRate: 1.092
   maxScale: 4
   waitTime: 0.3
   destroyDelay: 0.2
