@@ -77,7 +77,7 @@ public class MusicNote : MonoBehaviour
         if (circleFull && other.CompareTag("Player"))
         {
             Debug.Log("Note hit by Player");
-            StartCoroutine(playerMove.SetColors());
+            playerMove.CallCoroutine();
             GameManager.Instance.AddScore(10); 
             Destroy(gameObject); 
         }

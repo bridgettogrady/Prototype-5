@@ -45,4 +45,8 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(colorWait);
         sr.color = originalColor;
     }
+
+    public void CallCoroutine() {
+        StartCoroutine(SetColors());
+    }
 }

@@ -11,15 +11,8 @@ public class GameManager : MonoBehaviour
     public AudioSource backgroundMusic; 
     public int score = 0;
 
-    private bool gameStarted = false;
-
     void Update()
     {
-        if (!gameStarted && Input.anyKeyDown)
-        {
-            StartGame();
-        }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
@@ -28,9 +21,9 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
-        gameStarted = true;
         backgroundMusic.Play(); 
         StartCoroutine(SpawnNotes());
+        
     }
 
     IEnumerator SpawnNotes() 
@@ -71,9 +64,7 @@ public class GameManager : MonoBehaviour
         // stop and restart background music
         backgroundMusic.Stop();
         backgroundMusic.Play();
-
-        // restart game
-        gameStarted = false;
+        StartCoroutine(SpawnNotes());
     }
 
     public void AddScore(int points)
