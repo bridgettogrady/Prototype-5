@@ -10,9 +10,9 @@ public class MusicNote : MonoBehaviour
     private bool circleFull = false;
 
     // public variables
-    public float expansionRate = 1.01f;
-    public float maxScale = 1.2f;
-    public float waitTime = 1f;
+    public float expansionRate = 1.009f;
+    public float maxScale = 4f;
+    public float waitTime = 0.3f;
     public float destroyDelay = 0.2f;
     public Vector2 originalScale;
     private GameObject player; 
